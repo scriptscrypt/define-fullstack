@@ -1,15 +1,24 @@
 import React from "react";
 import Eth from "../eth.svg";
 import "../App.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logoImg from "../styles/DefineDEX.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 function Header(props) {
   const { address, isConnected } = props;
+  const location = useLocation();
+
+  console.log(location);
 
   return (
-    <header>
+    <header
+      className={
+        location.pathname === "/auth/" || location.pathname === "/auth"
+          ? "headerNone"
+          : "header"
+      }
+    >
       <div className="leftH">
         {/* <img src={Logo} alt="logo" className="logo" /> */}
         <Link to="/" className="link">
