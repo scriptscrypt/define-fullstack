@@ -16,15 +16,14 @@ header {
   color: #51586f;
   font-weight: bold;
   font-size: 32px;
-  background: linear-gradient(90deg, #5981f3 0%, #0e111b 100%);
+  background: linear-gradient(90deg, #0e111b 0%, #5981f3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .logo {
   width: 40px;
   height: 40px;
-  padding-right: 20px;
+  /* padding-right: 20px; */
 }
 
 .eth {
@@ -81,9 +80,11 @@ header {
 }
 
 .mainWindow {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: "100%";
 }
 
 .link {
@@ -110,6 +111,8 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 98%;
+  color: #fff;
+  padding: 16px 4px;
 }
 
 .cog {
@@ -275,4 +278,12 @@ header {
   font-size: 13px;
   font-weight: 300;
   color: #51596f;
+}
+
+.authWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
