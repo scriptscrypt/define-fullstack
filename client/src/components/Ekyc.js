@@ -50,22 +50,24 @@ const [formData, setFormData] = useState({
     <form onSubmit={handleSubmit}>
       <h2 className='head'>EKYC Registration</h2>
 
-      <label htmlFor="name">Name:</label>
+      {/* <label htmlFor="name">Name:</label> */}
       <input
         type="text"
         id="name"
         name="name"
+        className='ant-input-small'
         value={formData.name}
         onChange={handleChange}
-        placeholder="Enter your name"
+        placeholder="Name"
         required
       />
 
-      <label htmlFor="aadhar_number">Aadhar Number:</label>
+      {/* <label htmlFor="aadhar_number">Aadhar Number:</label> */}
       <input
         type="text"
         id="aadhar_number"
         name="aadhar_number"
+        className='ant-input-small'
         pattern="\d{12}"
         value={formData.aadhar_number}
         onChange={handleChange}
@@ -73,11 +75,12 @@ const [formData, setFormData] = useState({
         required
       />
 
-      <label htmlFor="phone_number">Phone Number:</label>
+      {/* <label htmlFor="phone_number">Phone Number:</label> */}
       <input
         type="tel"
         id="phone_number"
         name="phone_number"
+        className='ant-input-small'
         pattern="\d{10}"
         value={formData.phone_number}
         onChange={handleChange}
@@ -85,18 +88,19 @@ const [formData, setFormData] = useState({
         required
       />
 
-      <label htmlFor="wallet_address">Wallet Address:</label>
+      {/* <label htmlFor="wallet_address">Wallet Address:</label> */}
       <input
         type="text"
         id="wallet_address"
         name="wallet_address"
+        className='ant-input-small'
         value={formData.wallet_address}
         onChange={handleChange}
         placeholder="Enter your wallet address"
         required
       />
 
-      <button type="submit">Submit</button>
+      <button type="submit" className='swapButton'>Submit</button>
     </form>
     </> );
 };
